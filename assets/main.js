@@ -1,4 +1,5 @@
 // . Snack 1
+
 const racingBike =[
     {
         id:1,
@@ -35,6 +36,7 @@ console.log(racingBike);
 
  // . Snack 2
 
+const newSoccerTeams= []
  const soccerTeams = [
     {
         name:'Juventus',
@@ -63,8 +65,16 @@ console.log(racingBike);
     },
 
 ]
-delete soccerTeams['puntiFatti']
 console.log(soccerTeams);
+for(let i in soccerTeams){
+    const allTeams= soccerTeams[i]
+    delete allTeams.puntiFatti
+    
+}
+ 
+newSoccerTeams.push(soccerTeams)
+console.log(newSoccerTeams);
+
 
 
  
