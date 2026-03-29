@@ -46,44 +46,54 @@ const newSoccerTeams= []
  const soccerTeams = [
     {
         name:'Juventus',
-        puntiFatti: getRndInteger(0,100),
-        falliSubiti:getRndInteger(0,500)
+        puntiFatti: 0,
+        falliSubiti:0
     },
         {
         name:'Inter',
-        puntiFatti: getRndInteger(0,100),
-        falliSubiti:getRndInteger(0,500)
+        puntiFatti: 0,
+        falliSubiti:0
     },
         {
         name:'Milan',
-        puntiFatti: getRndInteger(0,100),
-        falliSubiti:getRndInteger(0,500)
+        puntiFatti: 0,
+        falliSubiti:0
     },
         {
         name:'Napoli',
-        puntiFatti: getRndInteger(0,100),
-        falliSubiti:getRndInteger(0,500)
+        puntiFatti: 0,
+        falliSubiti:0
     },
         {
         name:'Como',
-        puntiFatti: getRndInteger(0,100),
-        falliSubiti:getRndInteger(0,500)
+        puntiFatti: 0,
+        falliSubiti:0
     },
 
 ]
 console.log(soccerTeams);
-for(let i in soccerTeams){
-    const allTeams= soccerTeams[i]
-    delete allTeams.puntiFatti
+for (let i = 0; i < soccerTeams.length; i++) {
+    const team = soccerTeams[i];
+    team.falliSubiti=getRndInteger(1,100)
+    team.puntiFatti=getRndInteger(1,100)
     
 }
- 
-newSoccerTeams.push(soccerTeams)
-console.log(newSoccerTeams);
+
+const newTeams= []
+for (let i = 0; i < soccerTeams.length; i++) {
+    const team = soccerTeams[i];
+    const newObj={
+        name:team.name,
+        falliSubiti:team.falliSubiti
+    }
+    newTeams.push(newObj)
+
+    
+}
+
+console.log(newTeams);
 
 
-
- 
  function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
