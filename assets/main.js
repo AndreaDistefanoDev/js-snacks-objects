@@ -28,11 +28,17 @@ const racingBike =[
         weight:9 
     }
 ]
-console.log(racingBike);
+let bike= racingBike[0]
+for (let i = 0; i < racingBike.length; i++) {
+    const bikeWeight = racingBike[i];
+    if (bikeWeight.weight<bike.weight) {
+        bike=bikeWeight
+    }
+    
+}
+console.log(bike);
 
- const moreWeight= racingBike[1]
- console.log(moreWeight);
- console.log(racingBike[1]['weight']);
+
 
  // . Snack 2
 
